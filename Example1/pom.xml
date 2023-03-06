@@ -12,6 +12,7 @@
     <artifactId>Example1</artifactId>
     <description>
         Создание бинов в конфигурации с помощью аннотации @Bean
+        Работа с Singleton and prototype и классом родителем
     </description>
 
     <properties>

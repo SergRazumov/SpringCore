@@ -17,7 +17,6 @@ import java.util.Objects;
 public class PostProxyInvokerContextListener implements ApplicationListener<ContextRefreshedEvent> {
     @Autowired
     private ConfigurableListableBeanFactory factory; // не ApplicationContext потому что могут быть синглтон Lazy, а так же
-
     // хранится инфа не о проксированном классе
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {

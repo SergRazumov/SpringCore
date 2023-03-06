@@ -15,7 +15,7 @@ public class PropertyFileApplicationContext extends GenericApplicationContext {
     }
 
     public static void main(String[] args) {
-        PropertyFileApplicationContext context = new PropertyFileApplicationContext("src/main/ttt/context.properties");
+        PropertyFileApplicationContext context = new PropertyFileApplicationContext("context.properties");
         System.out.println(context.getBean(ClassicalMusic.class).getSong());
     }
 }

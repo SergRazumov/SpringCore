@@ -13,5 +13,8 @@
         <module name="Example2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringCore" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

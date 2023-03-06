@@ -5,4 +5,6 @@ public class JazzMusic implements Music {
     public String getSong() {
         return "Down by the Riverside";
     }
+
+
 }

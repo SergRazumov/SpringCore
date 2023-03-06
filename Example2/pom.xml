@@ -11,15 +11,23 @@
 
     <artifactId>Example2</artifactId>
     <description>
-        Создание бинов с помощью аннотации @Component
-        @ComponentScan
-        Внедрение зависимостей с помощью @Qualifier
+        @Import аннотация позволяющая использовать один контекст
+        @Post-Construct и initMethod фазы
+        @   и destroyMethod фаза
+        Написание своего собственного PropertyFileApplicationContext с регистрацией BeanDefinition
+        Написание аннотации Scope со своим собственным идентификатором для замены BeanDefinition в Map и регистрации ее в BeanFactoryPostProcessor
+        Написание аннотации собственной аннотации DeprecatedClass и регистрации ее в BeanFactoryPostProcessor
+        Полный жизненный цикл Bean с заменой Bean внутри IOC Container
+        Работа с BeanDefinition и bean в рамках ApplicationListener
+
+        Правильная реализация передачи объекта через абстрактный класс вместо AnnotationContext
+        Работа с Time бенчмарк
     </description>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <spring-framework-version>4.0.3.RELEASE</spring-framework-version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <spring-framework-version>6.0.4</spring-framework-version>
     </properties>
 
     <dependencies>
@@ -49,4 +57,6 @@
         </dependency>
 
     </dependencies>
+
+
 </project>

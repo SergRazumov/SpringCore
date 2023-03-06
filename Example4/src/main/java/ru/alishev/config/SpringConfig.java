@@ -13,6 +13,8 @@ import ru.alishev.model.RockMusic;
 @ComponentScan("ru.alishev.model")
 @PropertySource("classpath:musicPlayer.properties")
 public class SpringConfig {
+
+
     @Bean
     public Music classicalMusic() {
         return new ClassicalMusic();

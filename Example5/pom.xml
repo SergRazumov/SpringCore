@@ -12,6 +12,8 @@
     <artifactId>Example5</artifactId>
     <description>
         Жизненный цикл бина. @PostConstruct
+        Аннотация @Primary
+        @Autowire приоритетный конструктор
     </description>
 
     <properties>

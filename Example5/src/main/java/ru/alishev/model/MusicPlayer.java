@@ -17,12 +17,12 @@ public class MusicPlayer {
     //@Autowired
     private final ApplicationContext context;
 
-  //  public MusicPlayer(ApplicationContext context) {
-  //      this.context = context;
-   // }
+    public MusicPlayer(ApplicationContext context) {
+        this.context = context;
+    }
 
 
-  //  @Autowired
+    @Autowired
     public MusicPlayer(ApplicationContext context, String musicName) {
         this.context = context;
         music = context.getBean(musicName, Music.class);
@@ -50,6 +50,6 @@ public class MusicPlayer {
     }
 
     public void playMusic() {
-        System.out.format("Player %s is playing %s with %d volume%n", name, music.getSong(), volume);
+        System.out.format("Player -> %s is playing %s with %d volume%n", name, music.getSong(), volume);
     }
 }

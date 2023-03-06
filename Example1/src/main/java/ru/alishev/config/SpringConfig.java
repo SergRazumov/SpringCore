@@ -1,19 +1,21 @@
 package ru.alishev.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Description;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 import ru.alishev.model.*;
 
 @Configuration
 public class SpringConfig extends Config{
 
-   // @Scope("prototype")
+   @Scope("prototype")
    @Bean
-   public Music springClassicalMusic() {
+   public Music springClassicalMusicPrototype() {
        return classicalMusic();
    }
+
+    @Bean
+    public Music springClassicalMusic() {
+        return classicalMusic();
+    }
 
     @Bean(name = {"rockMusic", "RockMusic"})
     @Description("Текстовое описание бина RockMusic")

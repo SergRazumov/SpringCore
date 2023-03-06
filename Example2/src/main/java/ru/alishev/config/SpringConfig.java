@@ -10,11 +10,12 @@ import ru.alishev.model.RockMusic;
 @Configuration
 @ComponentScan("ru.alishev.model")
 @PropertySource("classpath:musicPlayer.properties")
+@Import(MySpringConfig.class)
 public class SpringConfig {
     @Bean
     public int myInt() { return 10; }
 
-    @Bean(initMethod = "")
+    @Bean
     @Scope(BeanDefinition.SCOPE_PROTOTYPE)
     public Music classicalMusic() {
         return new ClassicalMusic();

@@ -9,9 +9,9 @@ import ru.alishev.model.*;
 
 public class Main {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class, MySpringConfig.class);
-
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         Player player = context.getBean(Player.class);
+        System.out.println("---------------------------------------------------------------------------\n");
             player.playMusic();
             myTest(context);
         context.close();
@@ -28,8 +28,8 @@ public class Main {
         Music notJazzThisClassic = context.getBean("jazzMusic", Music.class);
         System.out.println(notJazzThisClassic.getSong());
 
-
-
-
+//      Если на этапе создания map с Definition положить Class то и в IOC Container произойдет замена объекта
+//       Player player = context.getBean("musicPlayer", NewMusicPlayer.class);
+//       player.playMusic();
     }
 }

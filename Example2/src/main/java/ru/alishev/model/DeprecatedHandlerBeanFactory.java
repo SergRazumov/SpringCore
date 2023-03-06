@@ -27,6 +27,6 @@ public class DeprecatedHandlerBeanFactory implements BeanFactoryPostProcessor {
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("-----------------Закончилась фаза postProcessBeanFactory---------------------\n");
+        System.out.println("-----------------Закончилась фаза BeanFactoryPostProcessor -> postProcessBeanFactory---------------------\n");
     }
 }

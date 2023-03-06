@@ -13,6 +13,7 @@
     <description>
         Чтение свойств бина из ресурсов с помощью @Value.
         Аннотация @PropertySource
+        Работа с двумя плеерами, и проверка на то что ссылка идет на один и тот же Singleton
     </description>
 
     <properties>

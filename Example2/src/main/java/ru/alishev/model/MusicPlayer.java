@@ -13,9 +13,9 @@ import javax.annotation.PreDestroy;
 
 @Component("musicPlayer")
 @DeprecatedClass(newImpl = NewMusicPlayer.class, switchAnnotation = false)
-public class MusicPlayer implements Player{
+public class MusicPlayer implements Player {
 
-    //Любая аннотация например Autowired или кастомная аннотация как здесь вызывается в фазе beforeInitialization
+
     @InjectRandomInt(min=1, max=100)
     @Getter
     private int volume;
@@ -33,7 +33,7 @@ public class MusicPlayer implements Player{
         // бина еще пустые, для инициализации и использовании этого в конструкторе нужен метод init она же аннотация Post-Construct
         System.out.println("Phase 0 MusicPlayer constructor AutowiredAnnotation " + switchMusicPlayer);
         System.out.println("Phase 0 MusicPlayer constructor Property " + name);
-        System.out.println("-----------------Закончилась фаза конструктора и базовой инициализации класса---------------------\n");
+        System.out.println("-----------------Закончилась фаза конструктора и базовой инициализации класса MusicPlayer---------------------\n");
     }
 
 
@@ -42,7 +42,7 @@ public class MusicPlayer implements Player{
     @PostConstruct
     private void init() {
         System.out.println("Phase 2 volume after post-construct this init " + volume);
-        System.out.println("-----------------Закончилась фаза PostConstruct---------------------\n");
+        System.out.println("-----------------Закончилась фаза PostConstruct для MusicPlayer---------------------\n");
     }
     @PostProxy
     private void postProxy() {
